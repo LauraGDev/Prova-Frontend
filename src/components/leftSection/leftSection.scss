@@ -1,0 +1,35 @@
+.container {
+    width: 100%;
+
+    .generator {
+        margin: 3.125rem auto 0 auto;
+        padding-bottom: 2.5rem;
+        width: 85%;
+        background-image: url("../../../public/bg.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        @media (min-width: 768px) {
+            width: 60%;
+        }
+    }
+
+    h2 {
+        padding: 0 2rem;
+        margin: 0.8rem 0 2rem 0;
+        font-size: 1.25rem;
+        line-height: 1.2;
+
+        @media (min-width: 768px) {
+            padding: 0 4rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        width: 500px;
+
+        &.left {
+            border-right: 2px dashed #414141;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.right {
+    padding: 0 2.125rem;
+    @media (min-width: 768px) {
+        padding: 0 5.125rem;
+    }
+    p {
+        font-weight: 600;
+    }
+}
