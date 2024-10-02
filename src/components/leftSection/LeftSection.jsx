@@ -2,14 +2,14 @@ import FilterContainer from "../filterContainer/FilterContainer";
 import Button from "../buttons/mainButton/Button"
 import './leftSection.scss'
 
-const LeftSection = () => {
+const LeftSection = ( { onGenerate, onFilterChange, selectedFilters } ) => {
     return (
         <section className="container left">
-            <FilterContainer />
+            <FilterContainer onFilterChange={onFilterChange} selectedFilters={selectedFilters}  />
             <div className="generator">
                 <img src="mascot.png" alt="Imatge mascota" />
                 <h2>TROBA ALGUNA COSA A FER</h2>
-                <Button />
+                <Button  text="Generar" onClick={onGenerate} />
             </div>
         </section>
     );

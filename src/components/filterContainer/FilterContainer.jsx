@@ -1,28 +1,24 @@
-import { useState } from "react";
 import Filter from "../buttons/filter/Filter";
 import "./filterContainer.scss";
 
-const FilterContainer = () => {
-    const filters = [
-        "Social",
-        "Educacció",
-        "Caritat",
-        "Cuinar",
-        "Relaxació",
-        "Treball intens",
-    ];
-    const [selectedFilters, setSelectedFilters] = useState([]); // Estado para almacenar los filtros seleccionados
+const FilterContainer = ({ onFilterChange, selectedFilters }) => {
+    const filtersMap = {
+        "Social": "social",
+        "Educacció": "education",
+        "Caritat": "charity",
+        "Cuinar": "cooking",
+        "Relaxació": "relaxation",
+        "Treball intens": "busywork",
+    };
+
+    const filters = Object.keys(filtersMap);
 
     const handleFilterChange = (filter) => {
-        setSelectedFilters(prevSelected => {
-            // Si el filtro ya está seleccionado, lo eliminamos
-            if (prevSelected.includes(filter)) {
-                return prevSelected.filter(f => f !== filter);
-            } else {
-                // Si no está seleccionado, lo añadimos
-                return [...prevSelected, filter];
-            }
-        });
+        const value = filtersMap[filter];
+        const newSelected = selectedFilters.includes(value)
+            ? selectedFilters.filter((f) => f !== value)
+            : [...selectedFilters, value];
+        onFilterChange(newSelected);
     };
 
     return (
