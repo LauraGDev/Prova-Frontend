@@ -3,6 +3,9 @@
 ## Descripció
 Boored és una aplicació web dissenyada per mostrar activitats per realitzar en moments d'avorriment. Permet a l'usuari generar activitats aleatòriament o seleccionar filtres per obtenir una activitat específica.
 
+## Url a l'aplicació
+![https://boored-psi.vercel.app/](https://boored-psi.vercel.app/)
+
 
 ## Captures de pantalla
 
